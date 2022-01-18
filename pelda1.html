@@ -6,6 +6,7 @@
 body {font-family: Arial, Helvetica, sans-serif;}
 * {box-sizing: border-box;}
 
+
 .open-button {
   background-color: #555;
   color: white;
@@ -28,11 +29,13 @@ body {font-family: Arial, Helvetica, sans-serif;}
   z-index: 9;
 }
 
+
 .form-container {
   max-width: 300px;
   padding: 10px;
   background-color: white;
 }
+
 
 .form-container input[type=text], .form-container input[type=password] {
   width: 100%;
@@ -41,6 +44,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
   border: none;
   background: #f1f1f1;
 }
+
 
 .form-container input[type=text]:focus, .form-container input[type=password]:focus {
   background-color: #ddd;
@@ -58,9 +62,11 @@ body {font-family: Arial, Helvetica, sans-serif;}
   opacity: 0.8;
 }
 
+
 .form-container .cancel {
   background-color: red;
 }
+
 
 .form-container .btn:hover, .open-button:hover {
   opacity: 1;
@@ -70,23 +76,23 @@ body {font-family: Arial, Helvetica, sans-serif;}
 <body>
 
 <h2>Popup Form</h2>
-<p>Click on the button at the bottom of this page to open the login form.</p>
-<p>Note that the button and the form is fixed - they will always be positioned to the bottom of the browser window.</p>
+<p>Kattints a gombra a jobb alsó sarokban, és megnyílik egy bejelentkező ablak.</p>
+<p>A gomb és az űrlap nem fix helyen van, mindig az ablak alján helyezkedik el.</p>
 
-<button class="open-button" onclick="openForm()">Open Form</button>
+<button class="open-button" onclick="openForm()">Form megnyítása</button>
 
 <div class="form-popup" id="myForm">
   <form action="/action_page.php" class="form-container">
-    <h1>Login</h1>
+    <h1>Bejelentkezés</h1>
 
     <label for="email"><b>Email</b></label>
-    <input type="text" placeholder="Enter Email" name="email" required>
+    <input type="text" placeholder="Email..." name="email" required>
 
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
+    <label for="psw"><b>Jelszó</b></label>
+    <input type="password" placeholder="Jelszó..." name="psw" required>
 
-    <button type="submit" class="btn">Login</button>
-    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+    <button type="submit" class="btn">Bejelentkezés</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Bezárás</button>
   </form>
 </div>
 
